@@ -1,897 +1,298 @@
--* { 
-    box-sizing: border-box; 
-} 
- 
-html { 
-    scroll-behavior: smooth; 
-} 
- 
-body { 
-    margin: 0; 
-    font-family: Arial, sans-serif; 
-    background: #080d18; 
-    color: white; 
-} 
- 
- 
-/* ========================= 
-   NAVBAR 
-========================= */ 
- 
-.navbar { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    z-index: 9999; 
- 
-    min-height: 70px; 
-    background: rgba(4, 9, 18, 0.98); 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 0 5%; 
-    border-bottom: 1px solid rgba(255,255,255,0.1); 
-} 
- 
-body { 
-    padding-top: 70px; 
-} 
- 
-.logo { 
-    font-size: 20px; 
-    font-weight: bold; 
-    letter-spacing: 1px; 
-} 
- 
-.nav-links { 
-    display: flex; 
-    flex-wrap: wrap; 
-    overflow-x: auto; 
-} 
- 
-.nav-links a { 
-    color: #ddd; 
-    text-decoration: none; 
-    padding: 25px 14px; 
-    white-space: nowrap; 
-    transition: 0.3s; 
-} 
- 
-.nav-links a:hover, 
-.nav-links a.active { 
-    color: #ffb52e; 
-} 
- 
- 
-/* ========================= 
-   HERO 
-========================= */ 
- 
-.hero { 
-    min-height: 650px; 
- 
-    display: flex; 
-    align-items: center; 
- 
-    padding: 60px 8%; 
- 
-    position: relative; 
-    overflow: hidden; 
-} 
- 
-.bg-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
-} 
- 
-.video-overlay { 
-    position: absolute; 
-    inset: 0; 
-    background: 
-    linear-gradient( 
-        90deg, 
-        rgba(0,0,0,0.6), 
-        rgba(0,0,0,0.6), 
-        rgba(0,0,0,0.6) 
-    ); 
-    z-index: 1; 
-} 
- 
-.hero-content { 
-    max-width: 650px; 
-    position: relative; 
-    z-index: 2; 
-} 
- 
-.small-title, 
-.section-small { 
-    color: #ffb52e; 
-    letter-spacing: 4px; 
-    font-size: 13px; 
-    font-weight: bold; 
-    margin: 0 0 10px; 
-} 
- 
-.hero h1 { 
-    font-size: 80px; 
-    line-height: 0.9; 
-    margin: 20px 0 25px; 
-    letter-spacing: 5px; 
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.9); 
-} 
- 
-.hero h1 span { 
-    color: #ffb52e; 
-} 
- 
-.hero-content > p:not(.small-title) { 
-    color: #eee; 
-    font-size: 18px; 
-    line-height: 1.7; 
-    margin: 0 0 10px; 
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.9); 
-} 
- 
-.explore-btn { 
-    display: inline-block; 
-    margin-top: 20px; 
-    padding: 15px 28px; 
-    background: #ffb52e; 
-    color: #111; 
-    text-decoration: none; 
-    font-weight: bold; 
-    transition: 0.3s; 
-} 
- 
-.explore-btn:hover { 
-    background: white; 
-    transform: translateY(-3px); 
-} 
- 
- 
-/* ========================= 
-   INTRO 
-========================= */ 
- 
-.intro { 
-    text-align: center; 
-    padding: 90px 10% 50px; 
-} 
- 
-.intro h2 { 
-    font-size: 42px; 
-    margin: 15px 0 20px; 
-} 
- 
-.intro-text { 
-    max-width: 700px; 
-    margin: 0 auto; 
-    color: #aaa; 
-    line-height: 1.8; 
-} 
- 
- 
-/* ========================= 
-   INTRO HIGHLIGHTS 
-========================= */ 
- 
-.intro-highlights { 
-    display: flex; 
-    justify-content: center; 
-    gap: 40px; 
-    margin-top: 40px; 
-    flex-wrap: wrap; 
-} 
- 
-.intro-item { 
-    text-align: center; 
-} 
- 
-.intro-item span { 
-    font-size: 36px; 
-    display: block; 
-    margin-bottom: 8px; 
-} 
- 
-.intro-item h4 { 
-    margin: 0; 
-    color: #ffb52e; 
-    font-size: 16px; 
-    letter-spacing: 1px; 
-} 
- 
- 
-/* ========================= 
-   HOME CARDS 
-========================= */ 
- 
-.destination-section { 
-    padding: 20px 6% 80px; 
-} 
- 
-.place-card { 
-    height: 350px; 
-    margin: 15px 0; 
- 
-    display: flex; 
-    align-items: flex-end; 
- 
-    padding: 25px; 
- 
-    position: relative; 
-    overflow: hidden; 
-} 
- 
-.card-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
-} 
- 
-.place-card::after { 
-    content: ""; 
- 
-    position: absolute; 
-    inset: 0; 
- 
-    background: 
-    linear-gradient( 
-        transparent, 
-        rgba(0,0,0,0.6) 
-    ); 
- 
-    z-index: 1; 
-} 
- 
-.place-card > div { 
-    position: relative; 
-    z-index: 2; 
-} 
- 
-.place-card h3 { 
-    font-size: 30px; 
-    margin: 0; 
-} 
- 
-.place-card p { 
-    color: #ddd; 
-    margin: 5px 0 0; 
-} 
- 
- 
-/* HOME VIDEOS */ 
- 
- 
-/* ========================= 
-   QUOTE 
-========================= */ 
- 
-.quote-section { 
-    padding: 100px 20px; 
-    text-align: center; 
-    background: #111827; 
-} 
- 
-.quote-section h2 { 
-    font-size: 32px; 
-    line-height: 1.5; 
-    margin: 0; 
-} 
- 
- 
-/* ========================= 
-   PAGE HEADER 
-========================= */ 
- 
-.page-header { 
-    min-height: 650px; 
- 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
- 
-    text-align: center; 
- 
-    position: relative; 
-    overflow: hidden; 
- 
-    background: #0a0f1a; 
-} 
- 
-.page-header .bg-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
-} 
- 
-.page-header .header-overlay { 
-    position: absolute; 
-    inset: 0; 
-    background: 
-    linear-gradient( 
-        rgba(0,0,0,0.6), 
-        rgba(0,0,0,0.6),  
-    ); 
-    z-index: 1; 
-} 
- 
-.page-header p, 
-.page-header h1 { 
-    position: relative; 
-    z-index: 2; 
-} 
- 
-.page-header p { 
-    color:red; 
-    letter-spacing: 5px; 
-    font-size: 13px; 
-    margin: 0 0 10px; 
-} 
- 
-.page-header h1 { 
-    font-size: 55px; 
-    margin: 10px 0 0; 
-    color:black; 
-} 
- 
- 
-/* ========================= 
-   ABOUT 
-========================= */ 
- 
-.about-section { 
-    padding: 90px 8%; 
-} 
- 
-.about-section h2 { 
-    font-size: 42px; 
-    margin: 15px 0 20px; 
-} 
- 
-.about-section p { 
-    color: #aaa; 
-    line-height: 1.8; 
-    margin: 0 0 15px; 
-} 
- 
-.about-box { 
-    padding: 50px; 
-    margin: 20px 0; 
-    text-align: center; 
- 
-    border: 1px solid rgba(255,181,46,0.4); 
-    background:#101827 ;
-    
-    font: size 16px;
-   
-} 
- 
-.about-icon { 
-    font-size: 70px; 
-    margin-bottom: 15px; 
-} 
- 
-.about-box h3 { 
-    margin: 0 0 15px; 
-} 
- 
-.about-box p { 
-    margin: 0; 
-} 
- 
-.features { 
-    background: #101827; 
-    padding: 80px 7%; 
-    text-align: center; 
-} 
- 
-.features h2 { 
-    font-size: 38px; 
-    margin: 0 0 40px; 
-} 
- 
-.feature-card { 
-    padding: 35px 20px; 
-    margin: 10px 0; 
- 
-    background: #080d18; 
- 
-    min-height: 220px; 
-} 
- 
-.feature-card span { 
-    font-size: 45px; 
-} 
- 
-.feature-card h3 { 
-    color: #ffb52e; 
-    margin: 15px 0 10px; 
-} 
- 
-.feature-card p { 
-    color: #aaa; 
-    line-height: 1.6; 
-    margin: 0; 
-} 
- 
- 
-/* ========================= 
-   GALLERY 
-========================= */ 
- 
-.gallery-section { 
-    padding: 70px 7%;
-} 
- 
-.gallery-title { 
-    text-align: center; 
-    font-size: 42px; 
-    margin-bottom: 40px; 
-} 
- 
-.center { 
-    text-align: center; 
-} 
- 
-.gallery-card { 
-    height: 340px; 
- 
-    margin: 15px 20px+; 
- 
-    position: relative; 
- 
-    display: flex; 
-    align-items: flex-end; 
- 
-    padding: 25px; 
- 
-    overflow: hidden; 
- 
-    transition: 0.4s; 
-} 
- 
-.gallery-card:hover { 
-    transform: translateY(-8px); 
-} 
- 
-.card-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
-} 
- 
-.gallery-card::after { 
-    content: ""; 
- 
-    position: absolute; 
-    inset: 0; 
- 
-    background: 
-    linear-gradient( 
-        transparent 35%, 
-        rgba(0,0,0,0.9) 
-    ); 
- 
-    z-index: 1; 
-} 
- 
-.gallery-card:hover::after { 
-    background: 
-    linear-gradient( 
-        transparent 20%, 
-        rgba(0,0,0,0.95) 
-    ); 
-} 
- 
-.gallery-text { 
-    position: relative; 
-    z-index: 2; 
-} 
- 
-.gallery-text h2 { 
-    margin: 0; 
-    font-size: 25px; 
-} 
- 
-.gallery-text p { 
-    color: #ddd; 
-    margin: 5px 0 0; 
-} 
- 
- 
-/* ========================= 
-   CELEBRATION 
-========================= */ 
- 
-.celebration-header { 
-    position: relative; 
-    overflow: hidden; 
-} 
- 
-.celebration-header .bg-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
-} 
- 
-.festival-intro { 
-    text-align: center; 
-    padding: 80px 20px 40px; 
-} 
- 
-.festival-intro h2 { 
-    font-size: 42px; 
-} 
- 
-.festival-intro > p:last-child { 
-    color: #aaa; 
-    max-width: 600px; 
-    margin: 15px auto 0; 
-} 
- 
-.festival-gallery { 
-    padding: 20px 7% 80px; 
-} 
- 
-.festival-image { 
-    height: 350px; 
- 
-    margin: 15px 0; 
- 
-    display: flex; 
-    align-items: flex-end; 
- 
-    padding: 25px; 
- 
-    position: relative; 
- 
-    overflow: hidden; 
- 
-    transition: 0.4s; 
-} 
- 
-.festival-image:hover { 
-    transform: translateY(-8px); 
-} 
- 
-.festival-image .card-video { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: 0; 
-} 
- 
-.festival-image::after { 
-    content: ""; 
- 
-    position: absolute; 
-    inset: 0; 
- 
-    background: 
-    linear-gradient( 
-        transparent 25%, 
-        rgba(0,0,0,0.92) 
-    ); 
- 
-    z-index: 1; 
-} 
- 
-.festival-image:hover::after { 
-    background: 
-    linear-gradient( 
-        transparent 10%, 
-        rgba(0,0,0,0.95) 
-    ); 
-} 
- 
-.festival-image > div { 
-    position: relative; 
-    z-index: 2; 
-} 
- 
-.festival-image h3 { 
-    font-size: 27px; 
-    margin: 0; 
-} 
- 
-.festival-image p { 
-    color: #ddd; 
-    margin: 5px 0 0; 
-} 
- 
-/* ========================= 
-   CONTACT 
-========================= */ 
- 
-.contact-section { 
-    padding: 90px 8%; 
-} 
- 
-.contact-section h2 { 
-    font-size: 42px; 
-    margin: 15px 0 20px; 
-} 
- 
-.contact-info p { 
-    color: #aaa; 
-    line-height: 1.7; 
-    margin: 0 0 15px; 
-} 
- 
-.contact-item { 
-    margin-top: 30px; 
-} 
- 
-.contact-item strong { 
-    color: #ffb52e; 
-} 
- 
-.contact-form { 
-    background: #101827; 
-    padding: 35px; 
-    margin-top: 20px; 
-} 
- 
-.contact-form h3 { 
-    font-size: 28px; 
-    margin: 0 0 10px; 
-} 
- 
-.contact-form label { 
-    display: block; 
-    margin-top: 20px; 
-    margin-bottom: 7px; 
-} 
- 
-.contact-form input, 
-.contact-form textarea { 
-    background: #080d18; 
-    color: white; 
-    border: 1px solid #334155; 
-    padding: 14px; 
-    width: 100%; 
-} 
- 
-.contact-form textarea { 
-    height: 130px; 
-    resize: none; 
-} 
- 
-.contact-form input:focus, 
-.contact-form textarea:focus { 
-    border-color: #ffb52e; 
-    outline: none; 
-} 
- 
-.send-btn { 
-    margin-top: 25px; 
-    padding: 14px 25px; 
- 
-    background: #ffb52e; 
- 
-    border: none; 
- 
-    font-weight: bold; 
- 
-    cursor: pointer; 
- 
-    transition: 0.3s; 
-} 
- 
-.send-btn:hover { 
-    background: white; 
-    transform: translateY(-3px); 
-} 
- 
- 
-/* ========================= 
-   STATISTICS 
-========================= */ 
- 
-.stats-section { 
-    padding: 60px 7%; 
-    text-align: center; 
-    background: #080d18; 
-} 
- 
-.stat-card { 
-    padding: 30px 15px; 
-    margin: 10px 0; 
-    background: #101827; 
-    border: 1px solid rgba(255, 181, 46, 0.3); 
-    min-height: 140px; 
-} 
- 
-.stat-card h3 { 
-    font-size: 38px; 
-    color: #ffb52e; 
-    margin: 0; 
-} 
- 
-.stat-card p { 
-    color: #aaa; 
-    margin: 8px 0 0; 
-} 
- 
- 
- 
- 
-/* ========================= 
-   VIDEO 
-========================= */ 
- 
-.video-section { 
-    padding: 80px 7%; 
-    text-align: center; 
-    background: #101827; 
-} 
- 
-.video-section h2 { 
-    font-size: 42px; 
-    margin: 15px 0 30px; 
-} 
- 
-.india-video { 
-    display: block; 
-    width: 100%; 
-    max-width: 1000px; 
-    height: auto; 
-    margin: 0 auto; 
-    background: #050914; 
-    border: 1px solid rgba(255,181,46,0.35); 
-} 
- 
- 
-/* ========================= 
-   FOOTER 
-========================= */ 
- 
-footer { 
-    text-align: center; 
- 
-    padding: 50px 20px; 
- 
-    background: #050914; 
- 
-    border-top: 1px solid rgba(255,255,255,0.08); 
-} 
- 
-footer h3 { 
-    color: #ffb52e; 
-} 
- 
-footer p { 
-    color: #999; 
-    margin: 8px 0; 
-} 
- 
-.copyright { 
-    font-size: 13px; 
-    margin-top: 25px; 
-} 
- 
- 
-/* ========================= 
-   MOBILE 
-========================= */ 
- 
-@media screen and (max-width: 700px) { 
- 
-    body { 
-        padding-top: 120px; 
-    } 
- 
-    .w3-quarter { 
-        width: 100%; 
-    } 
- 
-    .navbar { 
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        padding: 15px 10px; 
-    } 
- 
-    .logo { 
-        text-align: center; 
-        padding-bottom: 10px; 
-    } 
- 
-    .nav-links { 
-        justify-content: center; 
-        width: 100%; 
-        gap: 5px; 
-    } 
- 
-    .nav-links a { 
-        padding: 10px 10px; 
-        font-size: 13px; 
-    } 
- 
-    .hero { 
-        min-height: 550px; 
-        padding: 40px 7%; 
-    } 
- 
-    .hero h1 { 
-        font-size: 50px; 
-    } 
- 
-    .hero-content > p:not(.small-title) { 
-        font-size: 16px; 
-    } 
- 
-    .page-header h1 { 
-        font-size: 38px; 
-    } 
- 
-    .intro h2, 
-    .about-section h2, 
-    .contact-section h2, 
-    .festival-intro h2, 
-    .gallery-title { 
-        font-size: 30px; 
-    } 
- 
-    .contact-form { 
-        margin-top: 40px; 
-    } 
- 
-    .stat-card h3 { 
-        font-size: 32px; 
-    } 
- 
-    .intro-highlights { 
-        gap: 25px; 
-    } 
- 
-    .quote-section h2 { 
-        font-size: 22px; 
-    } 
- 
-    .culture-banner h2 { 
-        font-size: 28px; 
-    } 
- 
-    .place-card, 
-    .gallery-card, 
-    .festival-image { 
-        height: 280px; 
-    } 
- 
-    .about-box { 
-        padding: 30px 20px; 
-    } 
- 
-    .about-section, 
-    .contact-section { 
-        padding: 60px 5%; 
-    } 
- 
-} 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+    background: #080d18;
+    color: #fff;
+}
+
+img, video {
+    max-width: 100%;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 9999;
+    min-height: 70px;
+    background: rgba(4, 9, 18, .98);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 5%;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    padding: 25px 14px;
+    white-space: nowrap;
+    transition: color .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffb52e;
+}
+
+/* Home hero and video backgrounds */
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-title,
+.section-small {
+    color: #ffb52e;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    line-height: .9;
+    margin: 20px 0 25px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.9);
+}
+
+.hero h1 span { color: #ffb52e; }
+
+.hero-content > p:not(.small-title) {
+    color: #eee;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 10px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,.9);
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 28px;
+    background: #ffb52e;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.explore-btn:hover { background: #fff; transform: translateY(-3px); }
+
+/* Home introduction and destination cards */
+.intro { text-align: center; padding: 90px 10% 50px; }
+.intro h2, .about-section h2, .contact-section h2 { font-size: 42px; margin: 15px 0 20px; }
+.intro-text { max-width: 700px; margin: 0 auto; color: #aaa; line-height: 1.8; }
+.intro-highlights { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+.intro-item { text-align: center; }
+.intro-item span { display: block; font-size: 36px; margin-bottom: 8px; }
+.intro-item h4 { margin: 0; color: #ffb52e; font-size: 16px; letter-spacing: 1px; }
+.destination-section { padding: 20px 6% 80px; }
+.place-card {
+    height: 350px;
+    margin: 15px 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.card-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.place-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.75));
+    z-index: 1;
+}
+.place-card > div { position: relative; z-index: 2; }
+.place-card h3 { font-size: 30px; margin: 0; }
+.place-card p { color: #ddd; margin: 5px 0 0; }
+.quote-section { padding: 100px 20px; text-align: center; background: #111827; }
+.quote-section h2 { font-size: 32px; line-height: 1.5; margin: 0; }
+
+/* Inner page headers */
+.page-header {
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #0a0f1a;
+}
+.page-header .bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.page-header .header-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.58); z-index: 1; }
+.page-header p, .page-header h1 { position: relative; z-index: 2; }
+.page-header p { color: #ffb52e; letter-spacing: 5px; font-size: 13px; margin: 0 0 10px; }
+.page-header h1 { font-size: 55px; margin: 10px 0 0; color: #fff; text-shadow: 2px 2px 8px #000; }
+
+/* About page */
+.about-section { padding: 90px 8%; }
+.about-section p { color: #aaa; line-height: 1.8; margin: 0 0 15px; }
+.about-box { padding: 50px; margin: 20px 0; text-align: center; border: 1px solid rgba(255,181,46,.4); background: #101827; font-size: 16px; }
+.about-icon { font-size: 70px; margin-bottom: 15px; }
+.about-box h3 { margin: 0 0 15px; }
+.about-box p { margin: 0; }
+.features { background: #101827; padding: 80px 7%; text-align: center; }
+.features h2 { font-size: 38px; margin: 0 0 40px; }
+.feature-card { padding: 35px 20px; margin: 10px 0; background: #080d18; min-height: 220px; }
+.feature-card span { font-size: 45px; }
+.feature-card h3 { color: #ffb52e; margin: 15px 0 10px; }
+.feature-card p { color: #aaa; line-height: 1.6; margin: 0; }
+
+/* Gallery */
+.gallery-section { padding: 70px 7%; }
+.gallery-title { text-align: center; font-size: 42px; margin-bottom: 40px; }
+.center { text-align: center; }
+.gallery-card {
+    height: 340px;
+    margin: 15px 0;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    overflow: hidden;
+    transition: transform .4s;
+}
+.gallery-card:hover, .festival-image:hover { transform: translateY(-8px); }
+.gallery-card::after, .festival-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 25%, rgba(0,0,0,.9));
+    z-index: 1;
+}
+.gallery-text { position: relative; z-index: 2; }
+.gallery-text h2 { margin: 0; font-size: 25px; }
+.gallery-text p { color: #ddd; margin: 5px 0 0; }
+
+/* Celebration page */
+.celebration-header { position: relative; overflow: hidden; }
+.festival-intro { text-align: center; padding: 80px 20px 40px; }
+.festival-intro h2 { font-size: 42px; }
+.festival-intro > p:last-child { color: #aaa; max-width: 600px; margin: 15px auto 0; }
+.festival-gallery { padding: 20px 7% 80px; }
+.festival-image {
+    height: 350px;
+    margin: 15px 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .4s;
+}
+.festival-image > div { position: relative; z-index: 2; }
+.festival-image h3 { font-size: 27px; margin: 0; }
+.festival-image p { color: #ddd; margin: 5px 0 0; }
+
+/* Contact page */
+.contact-section { padding: 90px 8%; }
+.contact-info p { color: #aaa; line-height: 1.7; margin: 0 0 15px; }
+.contact-item { margin-top: 30px; }
+.contact-item strong { color: #ffb52e; }
+.contact-form { background: #101827; padding: 35px; margin-top: 20px; }
+.contact-form h3 { font-size: 28px; margin: 0 0 10px; }
+.contact-form label { display: block; margin: 20px 0 7px; }
+.contact-form input, .contact-form textarea { background: #080d18; color: #fff; border: 1px solid #334155; padding: 14px; width: 100%; }
+.contact-form textarea { height: 130px; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: #ffb52e; outline: 2px solid rgba(255,181,46,.25); }
+.send-btn { margin-top: 25px; padding: 14px 25px; background: #ffb52e; border: 0; font-weight: bold; cursor: pointer; transition: .3s; }
+.send-btn:hover { background: #fff; transform: translateY(-3px); }
+
+/* Statistics and video */
+.stats-section { padding: 60px 7%; text-align: center; background: #080d18; }
+.stat-card { padding: 30px 15px; margin: 10px 0; background: #101827; border: 1px solid rgba(255,181,46,.3); min-height: 140px; }
+.stat-card h3 { font-size: 38px; color: #ffb52e; margin: 0; }
+.stat-card p { color: #aaa; margin: 8px 0 0; }
+.video-section { padding: 80px 7%; text-align: center; background: #101827; }
+.video-section h2 { font-size: 42px; margin: 15px 0 30px; }
+.india-video { display: block; width: 100%; max-width: 1000px; height: auto; margin: 0 auto; background: #050914; border: 1px solid rgba(255,181,46,.35); }
+
+/* Footer */
+footer { text-align: center; padding: 50px 20px; background: #050914; border-top: 1px solid rgba(255,255,255,.08); }
+footer h3 { color: #ffb52e; }
+footer p { color: #999; margin: 8px 0; }
+.copyright { font-size: 13px; margin-top: 25px; }
+
+@media (max-width: 700px) {
+    body { padding-top: 120px; }
+    .navbar { flex-direction: column; justify-content: center; gap: 0; padding: 10px; }
+    .logo { justify-content: center; padding-bottom: 8px; font-size: 17px; }
+    .logo img { width: 48px; }
+    .nav-links { justify-content: center; width: 100%; }
+    .nav-links a { padding: 9px 8px; font-size: 13px; }
+    .hero { min-height: 550px; padding: 40px 7%; }
+    .hero h1 { font-size: 50px; }
+    .hero-content > p:not(.small-title) { font-size: 16px; }
+    .page-header { min-height: 420px; }
+    .page-header h1 { font-size: 38px; }
+    .intro h2, .about-section h2, .contact-section h2, .festival-intro h2, .gallery-title { font-size: 30px; }
+    .contact-form { margin-top: 40px; }
+    .stat-card h3 { font-size: 32px; }
+    .intro-highlights { gap: 25px; }
+    .quote-section h2 { font-size: 22px; }
+    .place-card, .gallery-card, .festival-image { height: 280px; }
+    .about-box { padding: 30px 20px; }
+    .about-section, .contact-section { padding: 60px 5%; }
+    .features, .gallery-section, .festival-gallery { padding-left: 5%; padding-right: 5%; }
+}
