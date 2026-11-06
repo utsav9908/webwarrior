@@ -3,164 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EXPLORE INDIA</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="W3.css">
-	
+    <meta name="description" content="Explore India's destinations, culture, heritage and traditions.">
+    <title>Explore India</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <!----Navbar-->
-	    
-        <nav class="navbar">
-             <div class="logo">
-              <img src=flag.jpg width="70px"> EXPLORE INDIA
-			 </div>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="index.html"><img src="flag.jpg" width="70" alt="Indian flag">EXPLORE INDIA</a>
+        <div class="nav-links">
+            <a class="active" href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="celebration.html">Celebration</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-             <div class="nav-links">
-                 <a  class="active" href="index.html">Home</a>
-                  <a href="about.html">About Us</a>
-                   <a href="gallery.html">Gallery</a>
-                    <a href="celebration.html">Celebration</a>
-                     <a href="contact.html">Contact</a>
-             </div>
-        </nav>
-
-		 <!--Hero-->
-
-         <section class="hero">
-
-			<div class="video-overlay">
-                
-				  <video class="bg-video" autoplay muted loop playsinline>
-					<source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941244/premmandir.mp4">
-				  </video>
-
-			</div>
-
-
-		          <div class="hero-content">
-				       <p class="small-title">WELCOME TO</p>
-					   
-					 <h1>
-					  EXPLORE<br>
-            		  <span>INDIA </span>
-					 </h1>
-				  
-				     <p>
-					    One Countries. Thousands Of Stories.
-						Discover the beauty.Culture and heritage of incredible India.
-					 </p>
-				  
-				   <a href="gallery.html" class="explore-btn">
-				       EXPLORE NOW 
-				   </a>
-				  
-		         </div>
-		 
-		 </section>
-		 <br>
-		 <br>
-
-		 <!---Intro-->
-
-		 <section class="intro w3-container">
-			      <p class="section-small">
-					DISCOVER THE MAGIC</p>
-				  <h2>Incredible India</h2>
-                  <p class="intro-text">India is a land of diverse culture,beautiful landscape,ancient heritege and unforgettable tradition.
-				     Every destination has its own unique story.
-				  </p>
-                   
-				  <div class="intro-highlights">
-                   
-					<div class="intro-item">
-						<span> 🏛️</span>
-						<h4>heritge</h4>
-					</div>
-
-					<div class="intro-item">
-						<span>🌊</span>
-						<h4>Nature</h4>
-					</div>
-
-					<div class="intro-item">
-                       <span>🎭</span>
-					   <h4>Culture</h4>
-					</div>
-
-				</div>	
-
-				  
+    <main>
+        <section class="hero">
+            <video class="bg-video" autoplay muted loop playsinline aria-hidden="true">
+                <source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941244/premmandir.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <p class="small-title">WELCOME TO</p>
+                <h1>EXPLORE<br><span>INDIA</span></h1>
+                <p>One country. Thousands of stories. Discover the beauty, culture and heritage of incredible India.</p>
+                <a href="gallery.html" class="explore-btn">EXPLORE NOW</a>
+            </div>
         </section>
 
-		<!--Destination-->
-
-		<section  class="destination-section w3-container">
-                  <div class="w3-row-padding">
-                        <div class="w3-third">
-                        <div class="place-card">
-
-							<video autoplay muted loop playsinline class="card-video">
-                             <source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941381/tajmahal.mp4">
-							</video>
-
-						<div>
-							<h3>Taj Mahal</h3>
-							<p>Agra,Uttar Pradesh</p>
-                  </div>
-             </div>
-		   </div>
-
-			<div class="w3-third">
-
-                     <div class="place-card">
-						<video autoplay muted loop playsinline class="card-video">
-                          <source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941648/ladakh.mp4">
-						</video>
-                      <div>
-					     <h3>ladakh</h3>
-						 <p>Mountains & Adventure</p>
-					  </div>
-                    </div>
-                  </div>
- 
-				   <div class="w3-third">
-
-					<div class="place-card">
-                         
-						<video autoplay muted loop playsinline class="card-video" >
-                          <source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941556/kerala.mp4">
-						</video>
-						<div>
-							<h3>Kerela</h3>
-				            <p>God's Own Country</p>
-                        </div>
-					</div>
-				</div>
-           </div>
-		</section>
-
-		<!--Qoute-->
-
-		<section class="quote-section">
-
-			<h2>"India is not just a place to visit,<br>
-			     it is a story to experience"</h2>
+        <section class="intro w3-container">
+            <p class="section-small">DISCOVER THE MAGIC</p>
+            <h2>Incredible India</h2>
+            <p class="intro-text">India is a land of diverse cultures, beautiful landscapes, ancient heritage and unforgettable traditions. Every destination has its own unique story.</p>
+            <div class="intro-highlights">
+                <div class="intro-item"><span aria-hidden="true">🏛️</span><h3>Heritage</h3></div>
+                <div class="intro-item"><span aria-hidden="true">🌊</span><h3>Nature</h3></div>
+                <div class="intro-item"><span aria-hidden="true">🎭</span><h3>Culture</h3></div>
+            </div>
         </section>
 
-		<!--Footer-->
-        
-		<footer>
-			  
-			<h3> <img src=flag.jpg width="70px">Explore India</h3>
+        <section class="destination-section w3-container" aria-label="Featured destinations">
+            <div class="w3-row-padding">
+                <div class="w3-third"><article class="place-card">
+                    <video autoplay muted loop playsinline class="card-video" aria-hidden="true"><source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941381/tajmahal.mp4" type="video/mp4"></video>
+                    <div><h2>Taj Mahal</h2><p>Agra, Uttar Pradesh</p></div>
+                </article></div>
+                <div class="w3-third"><article class="place-card">
+                    <video autoplay muted loop playsinline class="card-video" aria-hidden="true"><source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941648/ladakh.mp4" type="video/mp4"></video>
+                    <div><h2>Ladakh</h2><p>Mountains &amp; Adventure</p></div>
+                </article></div>
+                <div class="w3-third"><article class="place-card">
+                    <video autoplay muted loop playsinline class="card-video" aria-hidden="true"><source src="https://res.cloudinary.com/nxivxf77/video/upload/v1793941556/kerala.mp4" type="video/mp4"></video>
+                    <div><h2>Kerala</h2><p>God's Own Country</p></div>
+                </article></div>
+            </div>
+        </section>
 
-			<p>Discover.Experience.Remember</p>
+        <section class="quote-section">
+            <h2>“India is not just a place to visit,<br>it is a story to experience.”</h2>
+        </section>
+    </main>
 
-			<p class="copyright">
-				© 2026 Explore India
-            </p>
-
-	</footer>		
-    
+    <footer>
+        <h2><img src="flag.jpg" width="70" alt="Indian flag"> Explore India</h2>
+        <p>Discover • Experience • Remember</p>
+        <p class="copyright">© 2026 Explore India</p>
+    </footer>
 </body>
 </html>
