@@ -16,8 +16,8 @@ a { color: inherit; }
 
 /* Home hero */
 .hero { min-height: 650px; display: flex; align-items: center; padding: 60px 8%; position: relative; overflow: hidden; }
-.bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(1.15) saturate(1.08); }
-.video-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.32); z-index: 1; pointer-events: none; }
+.bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(1.22) saturate(1.12); }
+.video-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,9,18,.42) 0%, rgba(5,9,18,.20) 42%, rgba(5,9,18,.06) 100%), linear-gradient(0deg, rgba(5,9,18,.18), transparent 38%); z-index: 1; pointer-events: none; }
 .hero-content { max-width: 650px; position: relative; z-index: 2; }
 .small-title, .section-small { color: #ffb52e; letter-spacing: 4px; font-size: 13px; font-weight: bold; margin: 0 0 10px; }
 .hero h1 { font-size: 80px; line-height: .9; margin: 20px 0 25px; letter-spacing: 5px; text-shadow: 2px 2px 8px rgba(0,0,0,.9); }
@@ -36,8 +36,8 @@ a { color: inherit; }
 .intro-item h3 { margin: 0; color: #ffb52e; font-size: 16px; letter-spacing: 1px; }
 .destination-section { padding: 20px 6% 80px; }
 .place-card { height: 350px; margin: 15px 0; display: flex; align-items: flex-end; padding: 25px; position: relative; overflow: hidden; }
-.card-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(1.12) saturate(1.08); }
-.place-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent, rgba(0,0,0,.52)); z-index: 1; pointer-events: none; }
+.card-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(1.18) saturate(1.12); }
+.place-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,9,18,.02) 35%, rgba(5,9,18,.18) 68%, rgba(5,9,18,.62) 100%); z-index: 1; pointer-events: none; }
 .place-card > div { position: relative; z-index: 2; }
 .place-card h2 { font-size: 30px; margin: 0; }
 .place-card p { color: #ddd; margin: 5px 0 0; }
@@ -47,7 +47,7 @@ a { color: inherit; }
 /* Inner page headers */
 .page-header { min-height: 550px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; background: #0a0f1a; }
 .page-header .bg-video { z-index: 0; }
-.page-header .header-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.32); z-index: 1; pointer-events: none; }
+.page-header .header-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,9,18,.16) 0%, rgba(5,9,18,.08) 42%, rgba(5,9,18,.36) 100%); z-index: 1; pointer-events: none; }
 .page-header p, .page-header h1 { position: relative; z-index: 2; }
 .page-header p { color: #ffb52e; letter-spacing: 5px; font-size: 13px; margin: 0 0 10px; }
 .page-header h1 { font-size: 55px; margin: 10px 0 0; color: #fff; text-shadow: 2px 2px 8px #000; }
@@ -72,7 +72,7 @@ a { color: inherit; }
 .center { text-align: center; }
 .gallery-card, .festival-image { height: 340px; margin: 15px 0; position: relative; display: flex; align-items: flex-end; padding: 25px; overflow: hidden; transition: transform .3s; }
 .gallery-card:hover, .festival-image:hover { transform: translateY(-5px); }
-.gallery-card::after, .festival-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 25%, rgba(0,0,0,.58)); z-index: 1; pointer-events: none; }
+.gallery-card::after, .festival-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,9,18,.02) 30%, rgba(5,9,18,.18) 62%, rgba(5,9,18,.68) 100%); z-index: 1; pointer-events: none; }
 .gallery-text, .festival-image > div { position: relative; z-index: 2; }
 .gallery-text h3, .festival-image h2 { margin: 0; font-size: 25px; }
 .gallery-text p, .festival-image p { color: #ddd; margin: 5px 0 0; }
